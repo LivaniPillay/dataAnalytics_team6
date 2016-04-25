@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+   <head>
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">  </script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+      <script src="app.js"></script>
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="stylesheets/main.css">
+
+      <style>
+         .button {
+         background-color: #DCDCDC;
+         border: none;
+         color: white;
+         padding: 25px 112px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 16px;
+         margin: 6px 3px;
+         cursor: pointer;
+         }
+         .button2 {
+         background-color: #F8F8FF;
+         border: none;
+         color: black;
+         padding: 15px 30px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 16px;
+         margin: 6px 3px;
+         cursor: none;
+         }
+      </style>
+   </head>
+   <h1 text-align: center;
+      style= "text-align:center;" class="airbnb">AirBnB
+   </h1>
+   <body bgcolor="#F8F8FF">
+        <div id="indexPins">
+         <a href="#" class="button">
+            <!-- Marker Filled icon by Icons8 -->
+            <img class="icon icons8-Marker-Filled" src="" width="60" height="60">
+         </a>
+         <a href="#" class="button">
+            <!-- Marker Filled icon by Icons8 -->
+            <img class="icon icons8-Marker-Filled" src="" width="60" height="60">
+         </a>
+         <a href="#" class="button">
+            <!-- Marker Filled icon by Icons8 -->
+            <img class="icon icons8-Marker-Filled" src="" width="60" height="60">
+         </a>
+         <a href="#" class="button">
+            <!-- Marker Filled icon by Icons8 -->
+            <img class="icon icons8-Marker-Filled" src="" width="60" height="60">
+         </a>
+      </div>
+      <div id="indexTheme">
+         <a href="#" class="button2">
+            <!-- US Dollar icon by Icons8 -->
+            <img class="icon icons8-US-Dollar" src="" width="50" height="50">Price
+         </a>
+         <a href="#" class="button2">
+            <!-- Pen Filled icon by Icons8 -->
+            <img class="icon icons8-Pen-Filled" src="" width="50" height="50">Review
+         </a>
+         <a href="#" class="button2">
+            <!-- User icon by Icons8 -->
+            <img class="icon icons8-User" src="" width="50" height="50">Host
+         </a>
+         <a href="#" class="button2">
+            <!-- Dog House Filled icon by Icons8 -->
+            <img class="icon icons8-Dog-House-Filled" src="" width="50" height="50">Listing Details
+         </a>
+         <a href="#" class="button2">
+            <!-- Geo-fence icon by Icons8 -->
+            <img class="icon icons8-Geo-fence" src="" width="50" height="50">Location
+         </a>
+         <a href="#" class="button2">
+            <!-- Happy icon by Icons8 -->
+            <img class="icon icons8-Happy" src="" width="50" height="50">Easibility
+         </a>
+      </div>
+
+      <div id="map">
+      <iframe width="600" height="400" src="https://amratakasture-dataanalytics.shinyapps.io/DA_Proj/" style="margin-left:100px">
+      </iframe>
+      </div>
+
+
+      <input id="userEnteredListId">Enter Listing ID</input>
+      <br>
+      <button id="listingSelectionSubmit" class="btn btn-primary" type="button" onclick="getAirBnbContent();">Continue</button>
+      <br>
+      <div id="footer">
+         <style>
+            #footer {
+            background-color:#FF5A5F;
+            color:white;
+            clear:both;
+            text-align:center;
+            padding:15px; 
+            }
+            #stretchedButton {
+            display:inline-block;
+            min-width: 50px;
+            width: 100%;
+            padding:5px 10px;
+            }
+         </style>
+      </div>
+   </body>
+
+   <script type="text/javascript">
+       
+       function getAirBnbContent(){
+            window.location.href = "https://www.airbnb.com/rooms/" + document.getElementById("userEnteredListId").value;
+       }
+   </script>
+
+</html>
