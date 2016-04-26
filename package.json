@@ -10,7 +10,8 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "express": "4.13.3"
+    "express": "4.13.3",
+    "json2csv": "^3.3.0"
   },
   "repository": {
     "type": "git",

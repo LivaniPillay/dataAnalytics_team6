@@ -12,34 +12,44 @@
          style= "text-align:center;" class="airbnb">
          AirBnB
       </h1>
-      <h2>Personal Information</h2>
       <div id="personalDetails" style="padding:30px;">
+         <h2>Personal Information</h2>
             First name:<br>
-            <input type="text" name="firstname">
+            <input type="text" id="firstname">
             <br><br>
             Last name:<br>
-            <input type="text" name="lastname">
+            <input type="text" id="lastname">
             <br><br>
             Age:<br>
-            <input type="number" name="age">
+            <input type="number" id="age">
+            <br>
             <p> Please select your traveller type</p>
-            <input type="radio" name="travellerType" value="Student" checked>      Student<br>
+            <input type="radio" name="travellerType" value="Student" checked> Student<br>
             <input type="radio" name="travellerType" value="Working"> Working Professional<br>
             <input type="radio" name="travellerType" value="Family"> Family<br>
             <input type="radio" name="travellerType" value="other"> Other  
-            <br><br> 
-            Reason for visit:<br>
-            <input type="text" name="visitReason">
             <br><br>
             Number of Guests:<br>
-            <input type="number" name="numberofGuests">
+            <input type="number"  id="numberOfGuests">
             <br><br>
-            Number of rooms required:<br>
-            <input type="number" name="numberOfRooms">
+            Private Room:
+            <input type="checkbox" id="isPrivateRoom"/>
             <br><br>
-            Number of nights:<br>
-            <input type="number" name="nights">
+            <p>Please rate your preferences out of 3: </p>
+            Cleanliness:
+            <input type="radio" name="cleanliness" value="1" style="margin-left:10px;"> 1
+            <input type="radio" name="cleanliness" value="2" style="margin-left:10px;"> 2
+            <input type="radio" name="cleanliness" value="3" style="margin-left:10px;"> 3
             <br>
+            Location:
+            <input type="radio" name="locationPreference"  value="1" style="margin-left:10px;"> 1
+            <input type="radio" name="locationPreference" value="2" style="margin-left:10px;"> 2
+            <input type="radio" name="locationPreference" value="3" style="margin-left:10px;"> 3
+            <br>
+            Price:
+            <input type="radio" name="price"  value="1" style="margin-left:10px;"> 1
+            <input type="radio" name="price" value="2" style="margin-left:10px;"> 2
+            <input type="radio" name="price" value="3" style="margin-left:10px;"> 3
             <br><br>
             <button id="personalDetailsSubmit" class="btn btn-primary">Continue</button>
             <br><br>

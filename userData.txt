@@ -1,0 +1,3 @@
+
+{"firstname":"LIVANI","lastname":"PILLAY","age":"25","travellerType":"Student","numberOfGuests":"2","isPrivateRoom":false,"cleanliness":"1","locationPreference":"2","price":"3"}
+{"firstname":"AMRATA","lastname":"KASTURE","age":"24","travellerType":"Student","numberOfGuests":"2","isPrivateRoom":true,"cleanliness":"1","locationPreference":"3","price":"2"}
