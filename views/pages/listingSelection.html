@@ -9,92 +9,71 @@
 
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
       <link rel="stylesheet" href="stylesheets/main.css">
-
-      <style>
-         .button {
-         background-color: #DCDCDC;
-         border: none;
-         color: white;
-         padding: 25px 112px;
-         text-align: center;
-         text-decoration: none;
-         display: inline-block;
-         font-size: 16px;
-         margin: 6px 3px;
-         cursor: pointer;
-         }
-         .button2 {
-         background-color: #F8F8FF;
-         border: none;
-         color: black;
-         padding: 15px 30px;
-         text-align: center;
-         text-decoration: none;
-         display: inline-block;
-         font-size: 16px;
-         margin: 6px 3px;
-         cursor: none;
-         }
-      </style>
    </head>
    <h1 text-align: center;
       style= "text-align:center;" class="airbnb">AirBnB
    </h1>
    <body >
-        <div id="indexPins">
-         <span class="button">
-            <!-- Marker Filled icon by Icons8 -->
+   <div class="well">
+   <h3>Populairty Index:</h3>
+        <div class="row" style="margin:30px;">
+         <div class="col-md-2">
             <img class="icon" src="images/100hd.png" width="60" height="60">
-         </span>
-         <span class="button">
-            <!-- Marker Filled icon by Icons8 -->
+         </div>
+
+         <div class="col-md-2">
             <img class="icon" src="images/90hd.png" width="60" height="60">
-         </span>
-          <span class="button">
-            <!-- Marker Filled icon by Icons8 -->
+         </div>
+
+         <div class="col-md-2">
             <img class="icon" src="images/80.png" width="60" height="60">
-         </span>
-         <span class="button">
-            <!-- Marker Filled icon by Icons8 -->
+         </div>
+         
+         <div class="col-md-2">
             <img class="icon" src="images/70.png" width="60" height="60">
-         </span>
+         </div>
       </div>
-      <div id="indexTheme">
-        <span class="button2">
-            <!-- US Dollar icon by Icons8 -->
-            <img class="icon glyphicon glyphicon-star-empty" width="20" height="20">Price
-         </span>
-         <span class="button2">
-            <!-- Pen Filled icon by Icons8 -->
-            <img class="icon icons8-Pen-Filled" src="" width="50" height="50">Review
-          </span>
-          <span class="button2">
-            <!-- User icon by Icons8 -->
-            <img class="icon icons8-User" src="" width="50" height="50">Host
-          </span>
-         <span class="button2">
-            <!-- Dog House Filled icon by Icons8 -->
-            <img class="icon icons8-Dog-House-Filled" src="" width="50" height="50">Listing Details
-         </span>
-         <span class="button2">
-            <!-- Geo-fence icon by Icons8 -->
-            <img class="icon icons8-Geo-fence" src="" width="50" height="50">Location
-          </span>
-          <span class="button2">
-            <!-- Happy icon by Icons8 -->
-            <img class="icon icons8-Happy" src="" width="50" height="50">Easibility
-         </span>
+      <div id="indexTheme" style="margin:30px;">
+      <h4>Each index is calculated by considering each of the following factors: </h4>
+         <button class="btn btn-primary" type="button">
+           Price <span class="badge"><span class="glyphicon glyphicon-usd">
+         </span></span>
+         </button>
+
+         <button class="btn btn-primary" type="button">
+           Review <span class="badge"> <span class=" glyphicon glyphicon-pencil"> 
+         </span></span>
+         </button>
+
+         <button class="btn btn-primary" type="button">
+           Host <span class="badge"><span class=" glyphicon glyphicon-user"> 
+         </span></span>
+         </button>
+         
+         <button class="btn btn-primary" type="button">
+           Listing Details <span class="badge"> <span class=" glyphicon glyphicon-home"> 
+         </span></span>
+         </button>
+         <button class="btn btn-primary" type="button">
+           Easibility <span class="badge"> <span class="glyphicon glyphicon-thumbs-up"> 
+         </span></span>
+         </button>  
+      </div>
       </div>
 
-      <div id="map">
-      <iframe width="600" height="400" src="https://amratakasture-dataanalytics.shinyapps.io/DA_Proj/" style="margin-left:100px">
-      </iframe>
+      <div class="row">
+
+      <div class="col-md-7">
+         <div id="map">
+         <iframe width="600" height="400" src="https://amratakasture-dataanalytics.shinyapps.io/DA_Proj/" style="margin-left:100px">
+         </iframe>
+         </div>
       </div>
-      <div style="padding:30px;">
-      <input id="userEnteredListId">Enter Listing ID</input>
-      <br>
-      <button id="listingSelectionSubmit" class="btn btn-primary" type="button" onclick="getAirBnbContent();">Continue</button>
-      <br>
+      <div class="col-md-5">
+         Please enter the Listing  ID:
+         <input id="userEnteredListId"/>
+         <button id="listingSelectionSubmit" class="btn btn-primary" type="button" onclick="getAirBnbContent();">Continue</button>
+      </div>
       </div>
       <div id="footer">
          <style>
@@ -104,12 +83,6 @@
             clear:both;
             text-align:center;
             padding:15px; 
-            }
-            #stretchedButton {
-            display:inline-block;
-            min-width: 50px;
-            width: 100%;
-            padding:5px 10px;
             }
          </style>
       </div>
