@@ -4,9 +4,13 @@ var app = express();
 var fs = require('fs');
 var bodyParser = require('body-parser');
 var json2csv = require('json2csv');
-var fields = ['firstname', 'lastname', 'age', 'travellerType', 'numberOfGuests', 'isPrivateRoom', 'cleanliness', 'locationPreference', 'price'];
+var fields = ['firstname', 'lastname', 'age', 'travellerType', 'numberOfGuests', 'privateRoom', 'cleanliness', 'locationPreference', 'price'];
 
 app.set('port', (process.env.PORT || 5000));
+
+app.engine('.html', require('ejs').__express);
+app.set('views', __dirname + '/views/pages/');
+app.set('view engine', 'html');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -17,10 +21,17 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 app.get('/', function(request, response) {
- response.sendFile(__dirname + '/views/pages/personalDetails.html');
+	response.render("listingSelection")
 });
 
-app.post('/listings', function(request, response) {
+app.post('/listing', function(request, response){
+	 var obj = request.body;
+	 console.log(obj.listingId);
+
+	// response.render("personalDetails", {listingId : obj.listingId});
+});
+
+app.post('/confirm', function(request, response) {
 	 var obj = JSON.stringify(request.body);
 	 console.log('body: ' + obj);
 
@@ -36,13 +47,11 @@ app.post('/listings', function(request, response) {
 	 });
 });
 
-app.get('/listings', function(request, response) {
- response.sendFile(__dirname + '/views/pages/listingSelection.html');
+app.get('/confirm/:listingId', function(request, response) {
+	console.log("listingId " + request.params.listingId);
+	response.render("personalDetails", {listingId: request.params.listingId});
 });
 
-app.get('/confirm', function(request, response) {
- response.sendFile(__dirname + '/views/pages/confirmation.html');
-});
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));

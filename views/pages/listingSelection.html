@@ -34,19 +34,19 @@
          </div>
       </div>
       <div id="indexTheme" style="margin:30px;">
-      <h4>Each index is calculated by considering each of the following factors: </h4>
+      <h4>Each index is calculated by considering the following factors: </h4>
          <button class="btn btn-primary" type="button">
            Price <span class="badge"><span class="glyphicon glyphicon-usd">
          </span></span>
          </button>
 
          <button class="btn btn-primary" type="button">
-           Review <span class="badge"> <span class=" glyphicon glyphicon-pencil"> 
+           Reviews <span class="badge"> <span class=" glyphicon glyphicon-pencil"> 
          </span></span>
          </button>
 
          <button class="btn btn-primary" type="button">
-           Host <span class="badge"><span class=" glyphicon glyphicon-user"> 
+           Host Autheniticity <span class="badge"><span class=" glyphicon glyphicon-user"> 
          </span></span>
          </button>
          
@@ -71,8 +71,8 @@
       </div>
       <div class="col-md-5">
          Please enter the Listing  ID:
-         <input id="userEnteredListId"/>
-         <button id="listingSelectionSubmit" class="btn btn-primary" type="button" onclick="getAirBnbContent();">Continue</button>
+         <input id="listingId"/>
+         <button id = "listingSubmit" class="btn btn-primary" type="button">Continue</button>
       </div>
       </div>
       <div id="footer">
@@ -87,12 +87,5 @@
          </style>
       </div>
    </body>
-
-   <script type="text/javascript">
-       
-       function getAirBnbContent(){
-            window.location.href = "https://www.airbnb.com/rooms/" + document.getElementById("userEnteredListId").value;
-       }
-   </script>
 
 </html>

@@ -2,16 +2,18 @@
    <head>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">  </script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-      <script src="app.js"></script>
+       <script type="text/javascript" src="/app.js"></script>
 
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-      <link rel="stylesheet" href="stylesheets/main.css">
+      <link rel="stylesheet" href="/stylesheets/main.css">
    </head>
    <body>
       <h1 text-align: center;
          style= "text-align:center;" class="airbnb">
          AirBnB
       </h1>
+      <button class="btn btn-primary" id="backButton" style="margin-left:30px">Back</button>
+      <button class="btn btn-success" id="airBnbView">View on AirBnB </button>
       <div id="personalDetails" style="padding:30px;">
          <h2>Personal Information</h2>
             First name:<br>
@@ -22,7 +24,7 @@
             <br><br>
             Age:<br>
             <input type="number" id="age">
-            <br>
+            <br><br>
             <p> Please select your traveller type</p>
             <input type="radio" name="travellerType" value="Student" checked> Student<br>
             <input type="radio" name="travellerType" value="Working"> Working Professional<br>
@@ -32,24 +34,30 @@
             Number of Guests:<br>
             <input type="number"  id="numberOfGuests">
             <br><br>
+            <p>Please rank your preferences: </p>
             Private Room:
-            <input type="checkbox" id="isPrivateRoom"/>
-            <br><br>
-            <p>Please rate your preferences out of 3: </p>
+            <input type="radio" name="privateRoom" value="1" style="margin-left:10px;"> 1
+            <input type="radio" name="privateRoom" value="2" style="margin-left:10px;"> 2
+            <input type="radio" name="privateRoom" value="3" style="margin-left:10px;"> 3
+            <input type="radio" name="privateRoom" value="3" style="margin-left:10px;"> 4
+            <br>
             Cleanliness:
             <input type="radio" name="cleanliness" value="1" style="margin-left:10px;"> 1
             <input type="radio" name="cleanliness" value="2" style="margin-left:10px;"> 2
             <input type="radio" name="cleanliness" value="3" style="margin-left:10px;"> 3
+            <input type="radio" name="cleanliness" value="4" style="margin-left:10px;"> 4
             <br>
             Location:
-            <input type="radio" name="locationPreference"  value="1" style="margin-left:10px;"> 1
+            <input type="radio" name="locationPreference" value="1" style="margin-left:10px;"> 1
             <input type="radio" name="locationPreference" value="2" style="margin-left:10px;"> 2
             <input type="radio" name="locationPreference" value="3" style="margin-left:10px;"> 3
+            <input type="radio" name="locationPreference" value="4" style="margin-left:10px;"> 3
             <br>
             Price:
             <input type="radio" name="price"  value="1" style="margin-left:10px;"> 1
             <input type="radio" name="price" value="2" style="margin-left:10px;"> 2
             <input type="radio" name="price" value="3" style="margin-left:10px;"> 3
+            <input type="radio" name="price" value="4" style="margin-left:10px;"> 4
             <br><br>
             <button id="personalDetailsSubmit" class="btn btn-primary">Continue</button>
             <br><br>
