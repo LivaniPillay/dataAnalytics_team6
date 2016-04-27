@@ -27,6 +27,7 @@ $(function(){
             url: 'http://localhost:5000/confirm',						
             success: function(data) {
                 console.log(data);
+                window.location="../completed";
             }});
 
 	});

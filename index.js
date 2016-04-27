@@ -28,7 +28,6 @@ app.post('/listing', function(request, response){
 	 var obj = request.body;
 	 console.log(obj.listingId);
 
-	// response.render("personalDetails", {listingId : obj.listingId});
 });
 
 app.post('/confirm', function(request, response) {
@@ -51,6 +50,11 @@ app.get('/confirm/:listingId', function(request, response) {
 	console.log("listingId " + request.params.listingId);
 	response.render("personalDetails", {listingId: request.params.listingId});
 });
+
+app.get('/completed', function(request, response) {
+	response.render("confirmation");
+});
+
 
 
 app.listen(app.get('port'), function() {
