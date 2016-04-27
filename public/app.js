@@ -47,8 +47,7 @@ $(function(){
 
 	$("#airBnbView").on('click', function(event){
 
-		var url = window.location.href.split("/");
-		var listingId = url[url.length-1];
+		var listingId =	$("#listingId").val();
 
 		window.open(
 		  'https://www.airbnb.com/rooms/'+listingId,

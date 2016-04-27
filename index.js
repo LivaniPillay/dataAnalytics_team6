@@ -6,9 +6,6 @@ var bodyParser = require('body-parser');
 
 var json2csv = require('json2csv');
 var fields = ['firstname', 'lastname', 'age', 'travellerType', 'numberOfGuests', 'privateRoom', 'cleanliness', 'locationPreference', 'price'];
-var SHEET_NAME = "Sheet1";
-var SCRIPT_PROP = PropertiesService.getScriptProperties(); // new property service
-
 
 app.set('port', (process.env.PORT || 5000));
 
