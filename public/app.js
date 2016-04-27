@@ -24,7 +24,7 @@ $(function(){
 			type: 'POST',
 			data: JSON.stringify(info),
 	        contentType: 'application/json',
-            url: 'http://localhost:5000/confirm',						
+            url: 'https://localhost:5000/confirm',						
             success: function(data) {
                 console.log(data);
                 window.location="../completed";
