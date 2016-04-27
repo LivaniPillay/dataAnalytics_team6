@@ -3,8 +3,10 @@ var path = require('path');
 var app = express();
 var fs = require('fs');
 var bodyParser = require('body-parser');
+
 var json2csv = require('json2csv');
 var fields = ['firstname', 'lastname', 'age', 'travellerType', 'numberOfGuests', 'privateRoom', 'cleanliness', 'locationPreference', 'price'];
+
 
 app.set('port', (process.env.PORT || 5000));
 

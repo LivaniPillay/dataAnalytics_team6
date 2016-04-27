@@ -6,15 +6,36 @@
 
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
       <link rel="stylesheet" href="/stylesheets/main.css">
+      <script>
+         $(document).ready(function() {
+
+            var url = window.location.href.split("/");
+            var listingId = url[url.length-1];
+
+            $("#listingId").html("<h4 style='text-align: center;'>Listing ID: " + listingId + "</h4>");
+
+         });
+      </script>
+
    </head>
    <body>
       <h1 text-align: center;
          style= "text-align:center;" class="airbnb">
          AirBnB
       </h1>
-      <button class="btn btn-primary" id="backButton" style="margin-left:30px">Back</button>
+      <button class="btn btn-primary" id="backButton" style='margin-left:30px;' >Back</button>
       <button class="btn btn-success" id="airBnbView">View on AirBnB </button>
-      <div id="personalDetails" style="padding:30px;">
+
+      <span id="listingId"></span>
+      <br> <br>
+
+
+      <div style="margin-left:300px;">
+      <iframe src="https://docs.google.com/a/west.cmu.edu/forms/d/1ZXW5Cr4tz1DsZPAMpJapM3UafJR6EK0UepkL4oEUAKw/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+      </div>
+      <br>
+
+      <!-- div id="personalDetails" style="padding:30px;">
          <h2>Personal Information</h2>
             First name:<br>
             <input type="text" id="firstname">
@@ -61,8 +82,7 @@
             <br><br>
             <button id="personalDetailsSubmit" class="btn btn-primary">Continue</button>
             <br><br>
-      </div>
-      <br>
+      </div> -->
 
       <div id="footer">
          <style>
